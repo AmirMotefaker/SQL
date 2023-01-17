@@ -133,3 +133,28 @@ INSERT INTO Customers (CustomerName, City, Country)
 VALUES ('Cardinal', 'Stavanger', 'Norway');
 
 -----------------------------------------------------
+# SQL NULL Values
+# IS NULL Syntax
+SELECT column_names
+FROM table_name
+WHERE column_name IS NULL;
+
+# IS NOT NULL Syntax
+SELECT column_names
+FROM table_name
+WHERE column_name IS NOT NULL;
+
+# The IS NULL Operator
+# SQL lists all customers with a NULL value in the "Address" field:
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
+
+## Tip: Always use IS NULL to look for NULL values.
+
+# The IS NOT NULL Operator
+# SQL lists all customers with a value in the "Address" field:
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NOT NULL;
+-----------------------------------------------------
