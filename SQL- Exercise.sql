@@ -183,3 +183,15 @@ UPDATE Customers
 SET ContactName='Juan';
 
 -------------------------------------------------
+# SQL DELETE Statement
+# DELETE Syntax
+DELETE FROM table_name WHERE condition;
+
+# SQL statement deletes the customer "Alfreds Futterkiste" from the "Customers" table:
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+# Delete All Records
+DELETE FROM table_name;
+# SQL statement deletes all rows in the "Customers" table, without deleting the table:
+DELETE FROM Customers;
+-------------------------------------------------
