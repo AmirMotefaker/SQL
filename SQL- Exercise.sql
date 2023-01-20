@@ -195,3 +195,38 @@ DELETE FROM table_name;
 # SQL statement deletes all rows in the "Customers" table, without deleting the table:
 DELETE FROM Customers;
 -------------------------------------------------
+# The SQL SELECT TOP Clause
+
+# SQL Server / MS Access Syntax:
+SELECT TOP number|percent column_name(s)
+FROM table_name
+WHERE condition;
+
+# MySQL Syntax:
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+
+# SQL statement selects the first three records from the "Customers" table (for SQL Server/MS Access):
+SELECT TOP 3 * FROM Customers;
+# SQL statement shows the equivalent example for MySQL:
+SELECT * FROM Customers
+LIMIT 3;
+
+
+# SQL TOP PERCENT Example
+# SQL statement selects the first 50% of the records from the "Customers" table (for SQL Server/MS Access):
+SELECT TOP 50 PERCENT * FROM Customers;
+
+# ADD a WHERE CLAUSE
+# SQL statement selects the first three records from the "Customers" table, where the country is "Germany" (for SQL Server/MS Access):
+SELECT TOP 3 * FROM Customers
+WHERE Country='Germany';
+
+# SQL statement shows the equivalent example for MySQL:
+SELECT * FROM Customers
+WHERE Country='Germany'
+LIMIT 3;
+
+-------------------------------------------
