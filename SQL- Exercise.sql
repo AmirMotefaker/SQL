@@ -281,3 +281,37 @@ FROM Products;
 # SQL statement finds the sum of the "Quantity" fields in the "OrderDetails" table:
 SELECT SUM(Quantity)
 FROM OrderDetails;
+-----------------------------------------------
+# The SQL LIKE Operator
+# LIKE Syntax
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
+
+# SQL statement selects all customers with a CustomerName starting with "a":
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+
+# SQL statement selects all customers with a CustomerName ending with "a":
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%a';
+
+# SQL statement selects all customers with a CustomerName that have "or" in any position:
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%or%';
+
+# SQL statement selects all customers with a CustomerName that have "r" in the second position:
+SELECT * FROM Customers
+WHERE CustomerName LIKE '_r%';
+
+# SQL statement selects all customers with a CustomerName that starts with "a" and are at least 3 characters in length:
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a__%';
+
+# SQL statement selects all customers with a ContactName that starts with "a" and ends with "o":
+SELECT * FROM Customers
+WHERE ContactName LIKE 'a%o';
+
+# SQL statement selects all customers with a CustomerName that does NOT start with "a":
+SELECT * FROM Customers
+WHERE CustomerName NOT LIKE 'a%';
