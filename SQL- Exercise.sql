@@ -230,3 +230,54 @@ WHERE Country='Germany'
 LIMIT 3;
 
 -------------------------------------------
+# The SQL MIN() and MAX() Functions
+# MIN() Syntax
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+
+# MAX() Syntax
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
+# SQL statement finds the price of the cheapest product:
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+
+# SQL statement finds the price of the most expensive product:
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
+
+
+
+# The SQL COUNT(), AVG() and SUM() Functions
+# COUNT() Syntax
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+
+# The AVG() function returns the average value of a numeric column. 
+# AVG() Syntax
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+
+#The SUM() function returns the total sum of a numeric column. 
+# SUM() Syntax
+SELECT SUM(column_name)
+FROM table_name
+WHERE condition;
+
+# SQL statement finds the number of products:
+SELECT COUNT(ProductID)
+FROM Products;
+
+# SQL statement finds the average price of all products:
+SELECT AVG(Price)
+FROM Products;
+
+
+# SQL statement finds the sum of the "Quantity" fields in the "OrderDetails" table:
+SELECT SUM(Quantity)
+FROM OrderDetails;
