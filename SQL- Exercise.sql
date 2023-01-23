@@ -345,3 +345,13 @@ WHERE City LIKE '[bsp]%';
 # SQL statement selects all customers with a City starting with "a", "b", or "c":
 SELECT * FROM Customers
 WHERE City LIKE '[a-c]%';
+
+# Using the [!charlist] Wildcard
+# SQL statements select all customers with a City NOT starting with "b", "s", or "p":
+SELECT * FROM Customers
+WHERE City LIKE '[!bsp]%';
+
+# OR
+
+SELECT * FROM Customers
+WHERE City NOT LIKE '[bsp]%';
