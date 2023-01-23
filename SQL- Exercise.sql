@@ -335,3 +335,13 @@ WHERE City LIKE '_ondon';
 # SQL statement selects all customers with a City starting with "L", followed by any character, followed by "n", followed by any character, followed by "on":
 SELECT * FROM Customers
 WHERE City LIKE 'L_n_on';
+
+
+# Using the [charlist] Wildcard
+# SQL statement selects all customers with a City starting with "b", "s", or "p":
+SELECT * FROM Customers
+WHERE City LIKE '[bsp]%';
+
+# SQL statement selects all customers with a City starting with "a", "b", or "c":
+SELECT * FROM Customers
+WHERE City LIKE '[a-c]%';
