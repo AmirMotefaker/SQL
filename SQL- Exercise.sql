@@ -315,3 +315,23 @@ WHERE ContactName LIKE 'a%o';
 # SQL statement selects all customers with a CustomerName that does NOT start with "a":
 SELECT * FROM Customers
 WHERE CustomerName NOT LIKE 'a%';
+---------------------------------------------
+# SQL Wildcard Characters
+# Using the % Wildcard
+# SQL statement selects all customers with a City starting with "ber":
+SELECT * FROM Customers
+WHERE City LIKE 'ber%';
+
+# SQL statement selects all customers with a City containing the pattern "es": 
+SELECT * FROM Customers
+WHERE City LIKE '%es%';
+
+
+# Using the _ Wildcard
+# SQL statement selects all customers with a City starting with any character, followed by "ondon":
+SELECT * FROM Customers
+WHERE City LIKE '_ondon';
+
+# SQL statement selects all customers with a City starting with "L", followed by any character, followed by "n", followed by any character, followed by "on":
+SELECT * FROM Customers
+WHERE City LIKE 'L_n_on';
