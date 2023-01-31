@@ -26,46 +26,44 @@ SELECT DISTINCT Country FROM Customers;
 SELECT COUNT(DISTINCT Country) FROM Customers;
 
 -----------------------------------------
-# WHERE Syntax
+-- WHERE Syntax
 SELECT column1, column2, ...
 FROM table_name
 WHERE condition;
 
-# SQL statement selects all the customers from the country "Mexico", in the "Customers" table:
+-- SQL statement selects all the customers from the country "Mexico", in the "Customers" table:
 SELECT * FROM Customers
 WHERE Country='Mexico';
 -----------------------------------------
-# ORDER BY Syntax
+-- ORDER BY Syntax
 SELECT column1, column2, ...
 FROM table_name
 ORDER BY column1, column2, ... ASC|DESC;
 
-# SQL statement selects all customers from the "Customers" table, sorted by the "Country" column:
+-- SQL statement selects all customers from the "Customers" table, sorted by the "Country" column:
 SELECT * FROM Customers
 ORDER BY Country;
 
-# SQL statement selects all customers from the "Customers" table, sorted DESCENDING by the "Country" column:
+-- SQL statement selects all customers from the "Customers" table, sorted DESCENDING by the "Country" column:
 SELECT * FROM Customers
 ORDER BY Country DESC;
 
-# ORDER BY Several Columns Example
-# The following SQL statement selects all customers from the "Customers" table, sorted by the "Country" and the "CustomerName" column.
-# This means that it orders by Country, but if some rows have the same Country, it orders them by CustomerName:
+-- ORDER BY Several Columns Example
+-- The following SQL statement selects all customers from the "Customers" table, sorted by the "Country" and the "CustomerName" column.
+-- This means that it orders by Country, but if some rows have the same Country, it orders them by CustomerName:
 SELECT * FROM Customers
 ORDER BY Country, CustomerName;
 
-# SQL statement selects all customers from the "Customers" table, sorted ascending by the "Country" and descending by the "CustomerName" column:
+-- SQL statement selects all customers from the "Customers" table, sorted ascending by the "Country" and descending by the "CustomerName" column:
 SELECT * FROM Customers
 ORDER BY Country ASC, CustomerName DESC;
 
 ----------------------------------------
-
-
-# SQL requires single quotes around text values 
+-- SQL requires single quotes around text values 
 SELECT * FROM Customers
 WHERE CustomerID=1;
 
-# Operators in The WHERE Clause
+--Operators in The WHERE Clause
 -- =	      Equal	
 -- >       	Greater than	
 -- <	      Less than	
@@ -77,45 +75,45 @@ WHERE CustomerID=1;
 -- IN	      To specify multiple possible values for a column
 
 ------------------------------------------
-# AND Syntax
+-- AND Syntax
 SELECT column1, column2, ...
 FROM table_name
 WHERE condition1 AND condition2 AND condition3 ...;
 
-# OR Syntax
+-- OR Syntax
 SELECT column1, column2, ...
 FROM table_name
 WHERE condition1 OR condition2 OR condition3 ...;
 
-# NOT Syntax
+-- NOT Syntax
 SELECT column1, column2, ...
 FROM table_name
 WHERE NOT condition;
 
-# SQL statement selects all fields from "Customers" where country is "Germany" AND city is "Berlin":
+-- SQL statement selects all fields from "Customers" where country is "Germany" AND city is "Berlin":
 SELECT * FROM Customers
 WHERE Country='Germany' AND City='Berlin';
 
-# SQL statement selects all fields from "Customers" where city is "Berlin" OR "München":
+-- SQL statement selects all fields from "Customers" where city is "Berlin" OR "München":
 SELECT * FROM Customers
 WHERE City='Berlin' OR City='München';
 
-# SQL statement selects all fields from "Customers" where country is NOT "Germany":
+-- SQL statement selects all fields from "Customers" where country is NOT "Germany":
 SELECT * FROM Customers
 WHERE NOT Country='Germany';
 
-# Combining AND, OR and NOT
-# SQL statement selects all fields from "Customers" where country is "Germany" AND city must be "Berlin" OR "München" (use parenthesis to form complex expressions):
+-- Combining AND, OR and NOT
+-- SQL statement selects all fields from "Customers" where country is "Germany" AND city must be "Berlin" OR "München" (use parenthesis to form complex expressions):
 SELECT * FROM Customers
 WHERE Country='Germany' AND (City='Berlin' OR City='München');
 
-# SQL statement selects all fields from "Customers" where country is NOT "Germany" and NOT "USA":
+-- SQL statement selects all fields from "Customers" where country is NOT "Germany" and NOT "USA":
 SELECT * FROM Customers
 WHERE NOT Country='Germany' AND NOT Country='USA';
 
 --------------------------------------------------
-# INSERT INTO Syntax
-# 1. Specify both the column names and the values to be inserted:
+-- INSERT INTO Syntax
+-- 1. Specify both the column names and the values to be inserted:
 INSERT INTO table_name (column1, column2, column3, ...)
 VALUES (value1, value2, value3, ...);
 
