@@ -406,3 +406,20 @@ WHERE Price NOT BETWEEN 10 AND 20;
 SELECT * FROM Products
 WHERE Price BETWEEN 10 AND 20
 AND CategoryID NOT IN (1,2,3);
+
+-- BETWEEN Text Values
+-- SQL statement selects all products with a ProductName between Carnarvon Tigers and Mozzarella di Giovanni:
+SELECT * FROM Products
+WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
+ORDER BY ProductName;
+
+-- SQL statement selects all products with a ProductName between Carnarvon Tigers and Chef Anton's Cajun Seasoning:
+SELECT * FROM Products
+WHERE ProductName BETWEEN "Carnarvon Tigers" AND "Chef Anton's Cajun Seasoning"
+ORDER BY ProductName;
+
+-- NOT BETWEEN Text Values
+-- SQL statement selects all products with a ProductName not between Carnarvon Tigers and Mozzarella di Giovanni:
+SELECT * FROM Products
+WHERE ProductName NOT BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
+ORDER BY ProductName;
