@@ -339,42 +339,42 @@ WHERE City LIKE 'L_n_on';
 SELECT * FROM Customers
 WHERE City LIKE '[bsp]%';
 
-# SQL statement selects all customers with a City starting with "a", "b", or "c":
+-- SQL statement selects all customers with a City starting with "a", "b", or "c":
 SELECT * FROM Customers
 WHERE City LIKE '[a-c]%';
 
-# Using the [!charlist] Wildcard
-# SQL statements select all customers with a City NOT starting with "b", "s", or "p":
+-- Using the [!charlist] Wildcard
+-- SQL statements select all customers with a City NOT starting with "b", "s", or "p":
 SELECT * FROM Customers
 WHERE City LIKE '[!bsp]%';
 
-# OR
+-- OR:
 
 SELECT * FROM Customers
 WHERE City NOT LIKE '[bsp]%';
 -------------------------------------------
-# SQL IN Operator
+-- SQL IN Operator
 
-# IN Syntax
+-- IN Syntax
 SELECT column_name(s)
 FROM table_name
 WHERE column_name IN (value1, value2, ...);
 
-# or:
+-- or:
 
 SELECT column_name(s)
 FROM table_name
 WHERE column_name IN (SELECT STATEMENT);
 
-# SQL statement selects all customers that are located in "Germany", "France" or "UK":
+-- SQL statement selects all customers that are located in "Germany", "France" or "UK":
 SELECT * FROM Customers
 WHERE Country IN ('Germany', 'France', 'UK');
 
-# SQL statement selects all customers that are NOT located in "Germany", "France" or "UK":
+-- SQL statement selects all customers that are NOT located in "Germany", "France" or "UK":
 SELECT * FROM Customers
 WHERE Country NOT IN ('Germany', 'France', 'UK');
 
-# SQL statement selects all customers that are from the same countries as the suppliers:
+-- SQL statement selects all customers that are from the same countries as the suppliers:
 SELECT * FROM Customers
 WHERE Country IN (SELECT Country FROM Suppliers);
 
