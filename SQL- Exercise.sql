@@ -193,150 +193,149 @@ DELETE FROM table_name;
 -- SQL statement deletes all rows in the "Customers" table, without deleting the table:
 DELETE FROM Customers;
 -------------------------------------------------
-# The SQL SELECT TOP Clause
+-- The SQL SELECT TOP Clause
 
-# SQL Server / MS Access Syntax:
+-- SQL Server / MS Access Syntax:
 SELECT TOP number|percent column_name(s)
 FROM table_name
 WHERE condition;
 
-# MySQL Syntax:
+-- MySQL Syntax:
 SELECT column_name(s)
 FROM table_name
 WHERE condition
 LIMIT number;
 
-# SQL statement selects the first three records from the "Customers" table (for SQL Server/MS Access):
+-- SQL statement selects the first three records from the "Customers" table (for SQL Server/MS Access):
 SELECT TOP 3 * FROM Customers;
-# SQL statement shows the equivalent example for MySQL:
+-- SQL statement shows the equivalent example for MySQL:
 SELECT * FROM Customers
 LIMIT 3;
 
 
-# SQL TOP PERCENT Example
-# SQL statement selects the first 50% of the records from the "Customers" table (for SQL Server/MS Access):
+-- SQL TOP PERCENT Example
+-- SQL statement selects the first 50% of the records from the "Customers" table (for SQL Server/MS Access):
 SELECT TOP 50 PERCENT * FROM Customers;
 
-# ADD a WHERE CLAUSE
-# SQL statement selects the first three records from the "Customers" table, where the country is "Germany" (for SQL Server/MS Access):
+-- ADD a WHERE CLAUSE
+-- SQL statement selects the first three records from the "Customers" table, where the country is "Germany" (for SQL Server/MS Access):
 SELECT TOP 3 * FROM Customers
 WHERE Country='Germany';
 
-# SQL statement shows the equivalent example for MySQL:
+-- SQL statement shows the equivalent example for MySQL:
 SELECT * FROM Customers
 WHERE Country='Germany'
 LIMIT 3;
 
 -------------------------------------------
-# The SQL MIN() and MAX() Functions
-# MIN() Syntax
+-- The SQL MIN() and MAX() Functions
+-- MIN() Syntax
 SELECT MIN(column_name)
 FROM table_name
 WHERE condition;
 
-# MAX() Syntax
+-- MAX() Syntax
 SELECT MAX(column_name)
 FROM table_name
 WHERE condition;
 
-# SQL statement finds the price of the cheapest product:
+-- SQL statement finds the price of the cheapest product:
 SELECT MIN(Price) AS SmallestPrice
 FROM Products;
 
-# SQL statement finds the price of the most expensive product:
+-- SQL statement finds the price of the most expensive product:
 SELECT MAX(Price) AS LargestPrice
 FROM Products;
 
 
-
-# The SQL COUNT(), AVG() and SUM() Functions
-# COUNT() Syntax
+-- The SQL COUNT(), AVG() and SUM() Functions
+-- COUNT() Syntax
 SELECT COUNT(column_name)
 FROM table_name
 WHERE condition;
 
-# The AVG() function returns the average value of a numeric column. 
-# AVG() Syntax
+-- The AVG() function returns the average value of a numeric column. 
+-- AVG() Syntax
 SELECT AVG(column_name)
 FROM table_name
 WHERE condition;
 
-#The SUM() function returns the total sum of a numeric column. 
-# SUM() Syntax
+-- The SUM() function returns the total sum of a numeric column. 
+-- SUM() Syntax
 SELECT SUM(column_name)
 FROM table_name
 WHERE condition;
 
-# SQL statement finds the number of products:
+-- SQL statement finds the number of products:
 SELECT COUNT(ProductID)
 FROM Products;
 
-# SQL statement finds the average price of all products:
+-- SQL statement finds the average price of all products:
 SELECT AVG(Price)
 FROM Products;
 
 
-# SQL statement finds the sum of the "Quantity" fields in the "OrderDetails" table:
+-- SQL statement finds the sum of the "Quantity" fields in the "OrderDetails" table:
 SELECT SUM(Quantity)
 FROM OrderDetails;
 -----------------------------------------------
-# The SQL LIKE Operator
-# LIKE Syntax
+-- The SQL LIKE Operator
+-- LIKE Syntax
 SELECT column1, column2, ...
 FROM table_name
 WHERE columnN LIKE pattern;
 
-# SQL statement selects all customers with a CustomerName starting with "a":
+-- SQL statement selects all customers with a CustomerName starting with "a":
 SELECT * FROM Customers
 WHERE CustomerName LIKE 'a%';
 
-# SQL statement selects all customers with a CustomerName ending with "a":
+-- SQL statement selects all customers with a CustomerName ending with "a":
 SELECT * FROM Customers
 WHERE CustomerName LIKE '%a';
 
-# SQL statement selects all customers with a CustomerName that have "or" in any position:
+-- SQL statement selects all customers with a CustomerName that have "or" in any position:
 SELECT * FROM Customers
 WHERE CustomerName LIKE '%or%';
 
-# SQL statement selects all customers with a CustomerName that have "r" in the second position:
+-- SQL statement selects all customers with a CustomerName that have "r" in the second position:
 SELECT * FROM Customers
 WHERE CustomerName LIKE '_r%';
 
-# SQL statement selects all customers with a CustomerName that starts with "a" and are at least 3 characters in length:
+-- SQL statement selects all customers with a CustomerName that starts with "a" and are at least 3 characters in length:
 SELECT * FROM Customers
 WHERE CustomerName LIKE 'a__%';
 
-# SQL statement selects all customers with a ContactName that starts with "a" and ends with "o":
+-- SQL statement selects all customers with a ContactName that starts with "a" and ends with "o":
 SELECT * FROM Customers
 WHERE ContactName LIKE 'a%o';
 
-# SQL statement selects all customers with a CustomerName that does NOT start with "a":
+-- SQL statement selects all customers with a CustomerName that does NOT start with "a":
 SELECT * FROM Customers
 WHERE CustomerName NOT LIKE 'a%';
 ---------------------------------------------
-# SQL Wildcard Characters
-# Using the % Wildcard
-# SQL statement selects all customers with a City starting with "ber":
+-- SQL Wildcard Characters
+-- Using the % Wildcard
+-- SQL statement selects all customers with a City starting with "ber":
 SELECT * FROM Customers
 WHERE City LIKE 'ber%';
 
-# SQL statement selects all customers with a City containing the pattern "es": 
+-- SQL statement selects all customers with a City containing the pattern "es": 
 SELECT * FROM Customers
 WHERE City LIKE '%es%';
 
 
-# Using the _ Wildcard
-# SQL statement selects all customers with a City starting with any character, followed by "ondon":
+-- Using the _ Wildcard
+-- SQL statement selects all customers with a City starting with any character, followed by "ondon":
 SELECT * FROM Customers
 WHERE City LIKE '_ondon';
 
-# SQL statement selects all customers with a City starting with "L", followed by any character, followed by "n", followed by any character, followed by "on":
+-- SQL statement selects all customers with a City starting with "L", followed by any character, followed by "n", followed by any character, followed by "on":
 SELECT * FROM Customers
 WHERE City LIKE 'L_n_on';
 
 
-# Using the [charlist] Wildcard
-# SQL statement selects all customers with a City starting with "b", "s", or "p":
+-- Using the [charlist] Wildcard
+-- SQL statement selects all customers with a City starting with "b", "s", or "p":
 SELECT * FROM Customers
 WHERE City LIKE '[bsp]%';
 
