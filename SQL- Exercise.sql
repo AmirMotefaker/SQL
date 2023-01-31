@@ -382,21 +382,27 @@ SELECT * FROM Customers
 WHERE Country IN (SELECT Country FROM Suppliers);
 
 ------------------------------------------
-# SQL BETWEEN Operator 
-# The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
-# The BETWEEN operator is inclusive: begin and end values are included. 
+-- SQL BETWEEN Operator 
+-- The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
+-- The BETWEEN operator is inclusive: begin and end values are included. 
 
-# BETWEEN Syntax
+-- BETWEEN Syntax
 SELECT column_name(s)
 FROM table_name
 WHERE column_name BETWEEN value1 AND value2;
 
-# SQL statement selects all products with a price between 10 and 20:
+-- SQL statement selects all products with a price between 10 and 20:
 SELECT * FROM Products
 WHERE Price BETWEEN 10 AND 20;
 
 
-# NOT BETWEEN
-# To display the products outside the range of the previous example, use NOT BETWEEN:
+-- NOT BETWEEN
+-- To display the products outside the range of the previous example, use NOT BETWEEN:
 SELECT * FROM Products
 WHERE Price NOT BETWEEN 10 AND 20;
+
+--BETWEEN with IN Example
+-- SQL statement selects all products with a price between 10 and 20. In addition; do not show products with a CategoryID of 1,2, or 3:
+SELECT * FROM Products
+WHERE Price BETWEEN 10 AND 20
+AND CategoryID NOT IN (1,2,3);
