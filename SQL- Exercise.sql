@@ -117,80 +117,80 @@ WHERE NOT Country='Germany' AND NOT Country='USA';
 INSERT INTO table_name (column1, column2, column3, ...)
 VALUES (value1, value2, value3, ...);
 
-# 2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. 
-# However, make sure the order of the values is in the same order as the columns in the table. Here, the INSERT INTO syntax would be as follows:
+-- 2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. 
+-- However, make sure the order of the values is in the same order as the columns in the table. Here, the INSERT INTO syntax would be as follows:
 INSERT INTO table_name
 VALUES (value1, value2, value3, ...);
 
-# SQL statement inserts a new record in the "Customers" table:
+-- SQL statement inserts a new record in the "Customers" table:
 INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
 VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
 
 
-# Insert Data Only in Specified Columns
-# SQL statement will insert a new record, but only insert data in the "CustomerName", "City", and "Country" columns (CustomerID will be updated automatically):
+-- Insert Data Only in Specified Columns
+-- SQL statement will insert a new record, but only insert data in the "CustomerName", "City", and "Country" columns (CustomerID will be updated automatically):
 INSERT INTO Customers (CustomerName, City, Country)
 VALUES ('Cardinal', 'Stavanger', 'Norway');
 
 -----------------------------------------------------
-# SQL NULL Values
-# IS NULL Syntax
+-- SQL NULL Values
+-- IS NULL Syntax
 SELECT column_names
 FROM table_name
 WHERE column_name IS NULL;
 
-# IS NOT NULL Syntax
+-- IS NOT NULL Syntax
 SELECT column_names
 FROM table_name
 WHERE column_name IS NOT NULL;
 
-# The IS NULL Operator
-# SQL lists all customers with a NULL value in the "Address" field:
+-- The IS NULL Operator
+-- SQL lists all customers with a NULL value in the "Address" field:
 SELECT CustomerName, ContactName, Address
 FROM Customers
 WHERE Address IS NULL;
 
-## Tip: Always use IS NULL to look for NULL values.
+-- Tip: Always use IS NULL to look for NULL values.
 
-# The IS NOT NULL Operator
-# SQL lists all customers with a value in the "Address" field:
+-- The IS NOT NULL Operator
+-- SQL lists all customers with a value in the "Address" field:
 SELECT CustomerName, ContactName, Address
 FROM Customers
 WHERE Address IS NOT NULL;
 -----------------------------------------------------
-# SQL UPDATE Statement
-# UPDATE Syntax
+-- SQL UPDATE Statement
+-- UPDATE Syntax
 UPDATE table_name
 SET column1 = value1, column2 = value2, ...
 WHERE condition;
 
-# SQL statement updates the first customer (CustomerID = 1) with a new contact person and a new city.
+-- SQL statement updates the first customer (CustomerID = 1) with a new contact person and a new city.
 UPDATE Customers
 SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
 WHERE CustomerID = 1;
 
-# UPDATE Multiple Records
-# SQL statement will update the ContactName to "Juan" for all records where country is "Mexico":
+-- UPDATE Multiple Records
+-- SQL statement will update the ContactName to "Juan" for all records where country is "Mexico":
 UPDATE Customers
 SET ContactName='Juan'
 WHERE Country='Mexico';
 
-# Update Warning!
-# Be careful when updating records. If you omit the WHERE clause, ALL records will be updated!
+-- Update Warning!
+-- Be careful when updating records. If you omit the WHERE clause, ALL records will be updated!
 UPDATE Customers
 SET ContactName='Juan';
 
 -------------------------------------------------
-# SQL DELETE Statement
-# DELETE Syntax
+-- SQL DELETE Statement
+-- DELETE Syntax
 DELETE FROM table_name WHERE condition;
 
-# SQL statement deletes the customer "Alfreds Futterkiste" from the "Customers" table:
+-- SQL statement deletes the customer "Alfreds Futterkiste" from the "Customers" table:
 DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
 
-# Delete All Records
+-- Delete All Records
 DELETE FROM table_name;
-# SQL statement deletes all rows in the "Customers" table, without deleting the table:
+-- SQL statement deletes all rows in the "Customers" table, without deleting the table:
 DELETE FROM Customers;
 -------------------------------------------------
 # The SQL SELECT TOP Clause
