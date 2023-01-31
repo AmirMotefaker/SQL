@@ -1,4 +1,4 @@
--- W3School SQL Course
+-- W3School - Learn SQL
 -- SQL (Structured Query Language) is a standard language for storing, manipulating and retrieving data in relational databases.
 ---------------------------------------
 -- SELECT Syntax
