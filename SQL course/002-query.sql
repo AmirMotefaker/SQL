@@ -37,3 +37,17 @@ FROM customers
 
 SELECT first_name, last_name, points, points+10, points * 10 + 100, (points * 10) + 100, points * (10 + 100)
 FROM customers
+
+-----------------------------------
+SELECT 
+	last_name,
+    first_name,
+    points, (points * 10) + 100 AS discount_factor
+FROM customers
+
+SELECT 
+	last_name,
+    first_name,
+    points, (points * 10) + 100 AS 'discount factor'
+FROM customers
+-----------------------------------
