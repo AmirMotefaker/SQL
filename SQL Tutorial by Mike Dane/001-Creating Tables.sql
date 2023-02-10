@@ -1,5 +1,3 @@
-==
-
 -- INT                           -- Whole Numbers
 -- DECIMAL(M,N)                  -- Decimal Numbers - Exact Value
 -- VARCHAR(l)                    -- String of text of length l
