@@ -1,4 +1,5 @@
 -- Constraints
+
 CREATE TABLE student (
   student_id INT PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(40) NOT NULL,
