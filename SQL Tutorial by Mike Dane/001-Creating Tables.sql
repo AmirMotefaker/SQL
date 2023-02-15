@@ -14,6 +14,8 @@ CREATE TABLE student (
 );
 
 DESCRIBE student;
+
 DROP TABLE student;
+
 ALTER TABLE student ADD gpa DECIMAL;
 ALTER TABLE student DROP COLUMN gpa;
