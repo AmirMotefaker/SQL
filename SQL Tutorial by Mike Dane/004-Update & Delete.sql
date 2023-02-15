@@ -1,3 +1,5 @@
+-- Update & Delete
+
 DELETE FROM student;
 
 DELETE FROM student
