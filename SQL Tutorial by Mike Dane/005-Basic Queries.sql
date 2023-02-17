@@ -1,6 +1,5 @@
 -- Basic Queries
 
-
 SELECT *
 FROM student;
 
