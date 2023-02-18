@@ -1,4 +1,4 @@
--- Creating Company Database
+-- Creating Comny Database
 
 CREATE TABLE employee (
   emp_id INT PRIMARY KEY,
