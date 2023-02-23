@@ -1,4 +1,4 @@
--- create-databases
+-- Create Databases
 
 DROP DATABASE IF EXISTS `sql_invoicing`;
 CREATE DATABASE `sql_invoicing`; 
