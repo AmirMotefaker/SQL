@@ -89,6 +89,7 @@ INSERT INTO `payments` VALUES (6,3,17,'2019-01-15',68.10,1);
 INSERT INTO `payments` VALUES (7,5,18,'2019-01-08',32.77,1);
 INSERT INTO `payments` VALUES (8,5,18,'2019-01-08',10.00,2);
 
+----------------------------------------------
 
 DROP DATABASE IF EXISTS `sql_store`;
 CREATE DATABASE `sql_store`;
