@@ -229,11 +229,13 @@ CREATE TABLE `sql_store`.`order_item_notes` (
 INSERT INTO `order_item_notes` (`note_id`, `order_Id`, `product_id`, `note`) VALUES ('1', '1', '2', 'first note');
 INSERT INTO `order_item_notes` (`note_id`, `order_Id`, `product_id`, `note`) VALUES ('2', '1', '2', 'second note');
 
+-----------------------------------------
 
 DROP DATABASE IF EXISTS `sql_hr`;
 CREATE DATABASE `sql_hr`;
 USE `sql_hr`;
 
+----------------------------------------
 
 CREATE TABLE `offices` (
   `office_id` int(11) NOT NULL,
