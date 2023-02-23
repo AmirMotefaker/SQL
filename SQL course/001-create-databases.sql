@@ -95,6 +95,8 @@ DROP DATABASE IF EXISTS `sql_store`;
 CREATE DATABASE `sql_store`;
 USE `sql_store`;
 
+---------------------------------------------
+
 CREATE TABLE `products` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
