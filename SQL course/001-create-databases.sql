@@ -7,6 +7,8 @@ USE `sql_invoicing`;
 SET NAMES utf8 ;
 SET character_set_client = utf8mb4 ;
 
+------------------------------------------
+
 CREATE TABLE `payment_methods` (
   `payment_method_id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
