@@ -1,3 +1,6 @@
+-- Queries
+
+
 SELECT * FROM sql_store.customers;
 
 SELECT * FROM sql_store.orders;
